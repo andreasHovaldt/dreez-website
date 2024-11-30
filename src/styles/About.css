@@ -1,0 +1,26 @@
+.About-top-centered {
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+  }
+
+
+.About-top-centered p {
+    display: inline-block;
+    max-width: 600px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+  }
+
+.About-top-centered img {
+    /*display: inline-block;*/
+    width: 70%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+  }

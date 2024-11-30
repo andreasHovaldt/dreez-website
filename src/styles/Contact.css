@@ -1,0 +1,16 @@
+.Contact-top-centered {
+    padding-top: 50px;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+  }
+
+.Contact-top-centered p {
+    display: inline-block;
+    max-width: 600px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+  }
