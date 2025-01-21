@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Footer from "../components/Footer";
-import GreyBox from "../components/GreyBox";
 import GreyBoxRepos from "../components/GreyBoxRepos";
 
 import "../styles/Repositories.css"
+import "../styles/Home.css"
 
 
 function Repositories() {

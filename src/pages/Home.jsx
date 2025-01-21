@@ -25,10 +25,10 @@ function Home() {
                     </td>
                     <td align="left" style={{paddingLeft:"20pt"}}>
                       <h1 className="blue-color">Welcome to my website!</h1>
-                      <p className="blue-color" style={{fontSize:"16pt", fontStyle:"italic", fontWeight:"lighter"}}>
+                      <p className="blue-color" style={{fontSize:"16pt", fontStyle:"italic", }}>
                         My name is Andreas Hovaldt Højrup and I'm a student at Aalborg University.
-                        I finished my Bachelors in Robotics in the summer of 2024. 
-                        Currently I'm undergoing my masters in Computer Engineering, specializing in AI, Vision and Sound.
+                        I finished my Bachelor's in Robotics in the summer of 2024. 
+                        Currently I'm persuing a Master's in Computer Engineering, specifically specializing in AI, Vision and Sound.
                       </p>
                     </td>
                   </tr>
@@ -80,14 +80,17 @@ function Home() {
                   <h2>Explore My University Projects!</h2> 
                 </div>
                 <div style={{display: "flex", marginTop: "-25pt"}}>
-                  <h4>Delve into my project experiences while studying at Aalborg University for both my Bachelors and Masters.</h4>
+                  <h4>Delve into my project experiences while studying at Aalborg University for both my Bachelor's and Master's.</h4>
                 </div>
                 <div className="text-hover" style={{display: "flex", alignItems: "center", gap: "10pt", marginTop: "-15pt", color:"rgb(23, 202, 247)"}}>
-                  <h4>Click here to see more</h4>
+                  <h4>Click to see more</h4>
                   <i className="fa-solid fa-arrow-right" style={{ fontSize: "15pt" }}></i>
                 </div>
               </GreyBox>
             </Link>
+
+
+
 
 
             {/* My top GitHub repositories */}
