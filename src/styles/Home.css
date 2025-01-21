@@ -1,6 +1,74 @@
 .Home {
-    position: fixed;
+    position: static;
     width: 100%;
     top: 50px;
     text-align: center;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    flex-direction: column; /* Stacks elements vertically */
   }
+
+.true-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.blue-color {
+  color: #15bbe5;
+}
+
+
+.greyboxflex { display: flex; gap: 20pt; }
+.greyboxflexcontent { margin-left: 10px; margin-top: -6px; }
+
+
+.imageflex { display: flex; }
+.imageflexcontent { margin-left: 10px; margin-top: -2px; }
+
+
+.buttonflex { display: flex; gap: 70pt; }
+
+.buttonflex a {
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: inherit;
+}
+
+.buttonflex a:hover {
+  color: #5395f2;
+}
+
+.icon-btn {
+  background-color: transparent; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 0px 10px; /* Some padding */
+  font-size: 60px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.icon-btn:hover {
+  color: #5395f2;
+  filter: drop-shadow(0 0 15pt #0f728a);
+  transform: scale(1.1); /* Optional scaling effect */
+}
+
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 10pt; 
+  margin-top: -10pt;
+  color: #15bbe5;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.icon-link:hover {
+  color: #5395f2;
+  filter: drop-shadow(0 0 15pt #0f728a);
+  transform: scale(1.1); /* Optional scaling effect */
+}
