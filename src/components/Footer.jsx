@@ -1,11 +1,11 @@
 import React from "react";
-import "../styles/Footer.css";
+//import "../styles/Footer.css";
 
 function Footer() {
     return(
-        <footer className="Footer-text">
+        <div className="Footer">
             <p>&copy; {new Date().getFullYear()} dreez.dk - Andreas Hovaldt Højrup - All rights reserved</p>
-        </footer>
+        </div>
     );
 }
 

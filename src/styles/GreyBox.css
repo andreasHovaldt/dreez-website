@@ -1,0 +1,35 @@
+.GreyBox {
+    background-color: #1F2937;
+    color: white;
+    padding: 0px 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    border: 2px solid #35465E;
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    /*display:table;*/
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.GreyBox table tr td img {
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.GreyBox table tr td img:hover {
+    filter: drop-shadow(0 0 2em #e5e3e3aa);
+}
+
+.GreyBox.active:hover {
+    filter: drop-shadow(0 0 5pt #35465E);
+    transform: scale(1.15); /* Optional scaling effect */
+}
+
+.GreyBox.projects:hover {
+    filter: drop-shadow(0 0 5pt #35465E);
+    filter:brightness(1.3)
+}
+.text-hover:hover {
+    filter:brightness(0.8)
+}

@@ -8,14 +8,12 @@ import mountain_pic from '../assets/mountain_pic.jpeg';
 import "../styles/About.css"
 
 
-function About() {
+function Projects() {
     return (
-        <>
+          <>
             <div className="true-center blue-color">
-                <h1>Welcome to the About page!</h1>
+                <h1>Welcome to the Projects page!</h1>
             </div>
-
-            <img src={mountain_pic} alt="Mountain" className="true-center" style={{maxWidth:"400pt", border:"3px solid #35465E", borderRadius:"10pt"}}/>
 
             <div className="true-center blue-color">
                 <h2 className="blue-color">...work in progress...</h2>
@@ -27,10 +25,10 @@ function About() {
 
             {/* Footer */}
             <div className="true-center">
-            <Footer/>
+              <Footer/>
             </div>
-      </>
+          </>
     );
   }
   
-  export default About;
+  export default Projects;

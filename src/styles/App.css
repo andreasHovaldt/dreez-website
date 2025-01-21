@@ -1,14 +1,13 @@
-.App-text {
-  font-size: calc(2px + 2vmin);
-  color: white;
-  text-align: center;
+#root {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 /*
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+.App-text {
+  font-size: calc(2px + 2vmin);
+  color: white;
   text-align: center;
 }
 
