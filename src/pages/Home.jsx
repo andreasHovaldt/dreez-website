@@ -8,6 +8,7 @@ import GreyBoxRepos from "../components/GreyBoxRepos";
 import headshot from '../assets/CV_picture_scaled.png';
 
 import "../styles/Home.css"
+//import "../styles/Dropdown.css"
 
 function Home() {
   return (
@@ -90,6 +91,19 @@ function Home() {
             </Link>
 
 
+            {/* Technical skills dropdown menus*/}
+            {/*
+            <div className="dropdown-container">
+              <div className="dropdown-box">
+                Python
+                <div className="dropdown-menu">
+                  <p>Data Analysis</p>
+                  <p>Web Development</p>
+                  <p>Scripting</p>
+                </div>
+              </div>
+            </div>
+            */}
 
 
 
