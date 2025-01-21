@@ -2,26 +2,27 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Footer from "../components/Footer";
-
-import mountain_pic from '../assets/mountain_pic.jpeg';
+import GreyBoxRepos from "../components/GreyBoxRepos";
 
 import "../styles/Repositories.css"
+import "../styles/Home.css"
 
 
 function Repositories() {
     return (
         <>
-            <div className="true-center blue-color">
-                <h1>Welcome to the Repositories page!</h1>
+            {/* All my GitHub repositories */}
+            <div>
+              <h1 className="true-center" style={{marginTop: "40pt", marginBottom: "20pt", fontSize: "50pt"}}>All My GitHub Repositories</h1>
+              <GreyBoxRepos slice={false}/>
+            </div>
+            <div>
+              <Link to="/" className="icon-link">
+                <i className="fa-solid fa-arrow-left" style={{ fontSize: "15pt" }}></i>
+                <p>Go back to Home</p>
+              </Link>
             </div>
 
-            <div className="true-center blue-color">
-                <h2 className="blue-color">...work in progress...</h2>
-            </div>
-
-            <Link to="/" className="true-center">
-                <button>Go back to Home</button>
-            </Link>
 
             {/* Footer */}
             <div className="true-center">

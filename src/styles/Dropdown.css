@@ -1,0 +1,59 @@
+/* General container for all dropdown boxes */
+.dropdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between boxes */
+  }
+  
+  /* The individual dropdown box */
+  .dropdown-box {
+    /*position: relative; /* Important to position the dropdown menu relative to the box */
+    display: inline-flex;
+    padding: 10px 20px;
+    background-color: #1F2937; /* Dark background */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the box */
+  .dropdown-box:hover {
+    background-color: #374151; /* Slightly lighter shade */
+  }
+  
+  /* The dropdown menu (hidden by default) */
+  .dropdown-menu {
+    position: absolute; /* Position it relative to the parent box */
+    top: 100%; /* Align the top edge to the bottom of the box */
+    left: 0;
+    background-color: #1F2937;
+    border-radius: 5px;
+    padding: 10px;
+    display: none; /* Hidden by default */
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Dropdown menu text */
+  .dropdown-menu p {
+    margin: 0;
+    padding: 5px 10px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Hover effect for dropdown menu items */
+  .dropdown-menu p:hover {
+    background-color: #374151; /* Slightly lighter shade */
+  }
+  
+  /* Show the dropdown menu when hovering over the box */
+  .dropdown-box:hover .dropdown-menu {
+    display: block;
+  }
+  
