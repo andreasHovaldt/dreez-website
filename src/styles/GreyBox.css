@@ -6,7 +6,7 @@
     margin: 20px auto;
     border: 2px solid #35465E;
     border-radius: 10px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     display: grid;
     transition: filter 0.3s ease, transform 0.3s ease;
 }
@@ -17,7 +17,7 @@
 }
 
 .GreyBox table tr td img:hover {
-    filter: drop-shadow(0 0 2em #e5e3e3aa);
+    filter: drop-shadow(0 0 0.7em #e5e3e3aa);
 }
 
 .GreyBox.active:hover {
@@ -27,8 +27,5 @@
 
 .GreyBox.projects:hover {
     filter: drop-shadow(0 0 5pt #35465E);
-    filter:brightness(1.3)
-}
-.text-hover:hover {
-    filter:brightness(0.8)
+    filter: brightness(1.3)
 }

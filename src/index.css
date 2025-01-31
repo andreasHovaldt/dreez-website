@@ -67,5 +67,5 @@ html, body {
   padding: 0;
   width: 100%;
   min-height: 100%; /* Ensure the body grows with content */
-  overflow-x: hidden; /* Prevent horizontal scrolling if content overflows */
+  /*overflow-x: hidden; /* Prevent horizontal scrolling if content overflows */
 }

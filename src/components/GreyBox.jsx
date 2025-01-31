@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles/GreyBox.css";
 
-function GreyBox({ children , style = {}, className = "" }) {
+function GreyBox({ children , style = {}, className = "" , onClick }) {
 
     return (
-        <div className={`GreyBox ${className}`} style={style}>
+        <div className={`GreyBox ${className}`} style={style} onClick={onClick}>
             {children}
         </div>
     );

@@ -11,6 +11,10 @@ import "../styles/Home.css"
 
 
 function About() {
+    useEffect(() => {
+          document.title = "About";
+        }, []);
+    
     return (
         <>
             <div className="true-center blue-color">
@@ -25,24 +29,25 @@ function About() {
                 <div className="true-center" style={{flexDirection:"column"}}>
                     
                     <p style={{fontSize:"16pt"}}>
-                        Hello! My name is Andreas, currently I am persuing a Master's degree in Computer Engineering, with a focus on AI, Vision, and Sound.
-                        I love learning new technical skills and concepts and have a deep interest in modern technology.
-                        I am always seeking new and exciting ways and opportunities to apply my technical knowledge and skills to solve problems and make meaningful contributions to innovative projects. 
-                        Most important of all, I cherish the opportunity to learn and grow from the experiences and challenges that come my way.
+                        Hello! My name is Andreas, and I am currently pursuing a Master's degree in Computer Engineering, with a focus on AI, Vision, and Sound. 
+                        I have a passion for learning new technical skills and concepts and a deep interest in modern technology. 
+                        I am always seeking exciting ways and opportunities to apply my technical knowledge to solve problems and make meaningful contributions to innovative projects. 
+                        Above all, I value the opportunity to learn and grow from the experiences and challenges that come my way.
                     </p>
                     <p style={{fontSize:"16pt"}}>
-                        My native language is Danish, but I am also fluent in English as well, having written multiple projects in English including my Bachelor's thesis.
-                        Additionally, I have worked with both English speaking supervisors and group members for multiple semesters.
+                        My native language is Danish, but I am also fluent in English. 
+                        I have written all university projects in English, including my Bachelor's thesis. 
+                        Additionally, I have collaborated with English-speaking supervisors and group members across several semesters.
                     </p>
                     <p style={{fontSize:"16pt", fontStyle:"italic", fontWeight:"bold"}}>
-                        I am currently looking for an internship position for the fall semester of 2025. 
-                        I am open to opportunities in the field of AI, Vision, and Sound, but I am also open to other opportunities that can help me grow and develop as a computer engineer.
+                    I am currently seeking an internship position for the fall semester of 2025. 
+                    While I am particularly interested in opportunities within AI, Vision, and Sound, I am open to other roles that can help me grow and develop as a computer engineer.
                     </p>
                     <p style={{fontSize:"16pt"}}>
-                        In my free time I still have an interest in tech and automation, and I like to keep up with the latest trends and technologies.
-                        I have also worked on a few personal projects, including a small 3D printed self-driving car and a simple home-monitoring system utilizing either an Arduino or Raspberry PI.
-                        Right now I am exploring self-hosting multiple containerized services, like this personal website, an automated media-server, and game server hosting, all running natively on home server running Proxmox VE.
-                        When I am not working on any projects, I like to spend my time with my friends and family, I love to go for hiking trips or going for a run, and of course I enjoy playing video games 😉.
+                        In my free time, I continue to explore my interest in tech and automation, staying up to date with the latest trends and technologies. 
+                        I have worked on several personal projects, including a small 3D-printed self-driving car and a simple home-monitoring system using an Arduino or Raspberry Pi. 
+                        Currently, I am experimenting with self-hosting multiple containerized services, such as this personal website, an automated media server, and game server hosting, all running natively on a home server powered by Proxmox VE. 
+                        When I'm not working on projects, I enjoy spending time with my friends and family, going on hiking trips or runs, and, of course, playing video games. 😉
                     </p>
                 </div>
             </GreyBox>
