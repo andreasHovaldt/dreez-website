@@ -52,14 +52,13 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: rgb(255, 255, 255);
+    background-color: #02060f;
   }
-  a:hover {
-    color: #747bff;
-  }
+  
   button {
-    background-color: #f9f9f9;
+    color: rgb(255, 255, 255);
+    background-color: #1a1a1a;
   }
 }
 
@@ -68,5 +67,5 @@ html, body {
   padding: 0;
   width: 100%;
   min-height: 100%; /* Ensure the body grows with content */
-  overflow-x: hidden; /* Prevent horizontal scrolling if content overflows */
+  /*overflow-x: hidden; /* Prevent horizontal scrolling if content overflows */
 }

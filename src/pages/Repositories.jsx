@@ -9,7 +9,11 @@ import "../styles/Home.css"
 
 
 function Repositories() {
-    return (
+  useEffect(() => {
+        document.title = "About";
+      }, []);
+  
+  return (
         <>
             {/* All my GitHub repositories */}
             <div>

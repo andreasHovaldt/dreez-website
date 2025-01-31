@@ -1,0 +1,31 @@
+.project-info span {
+    display: flex;
+    gap: 25px;
+    align-items: left;
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.project-info div.hidden {
+    overflow: hidden;
+    transition: "max-height 0.5s ease-in-out, padding 0.3s ease-in-out";
+    background: inherit;
+    border-radius: 5px;
+}
+
+
+.project-box {
+    background-color: #1F2937;
+    color: white;
+    text-align: left;
+    transition: transform 0.3s, filter 0.3s;
+    border: 2px solid #35465E;
+}
+
+.project-box:hover {
+    filter: drop-shadow(0 0 15px #35465E);
+    border: 2px solid #5395f2;
+    transform: scale(1.02);
+}
