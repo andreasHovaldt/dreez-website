@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import "../styles/GreyBoxProjects.css";
 import GreyBox from "./GreyBox";
 
-function GreyBoxProjects({ title, description, abstract }) {
+function GreyBoxProjects({ title, description, abstract, link }) {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
 
@@ -14,13 +14,44 @@ function GreyBoxProjects({ title, description, abstract }) {
 
             <div className="project-info">
                 <span>
-                    <div>
+                    <div style={{ flex: "1 1 auto", minWidth: 0 }}>
                         <h2>{title}</h2>
                         <h4>{description}</h4>
                     </div>
-                    <i className={isOpen ? "fa-solid fa-angles-down" : "fa-solid fa-angles-right"} 
-                        style={{ fontSize: "30pt", marginTop: "25pt", marginLeft: "-5pt" }}
-                    ></i>
+                    <div
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            flex: "0 0 44px",
+                            width: "44px",
+                            marginTop: "25pt",
+                            marginLeft: "-5pt",
+                        }}
+                    >
+                        <i
+                            className={isOpen ? "fa-solid fa-angles-down fa-fw" : "fa-solid fa-angles-right fa-fw"}
+                            style={{ fontSize: "30pt" }}
+                        ></i>
+                        {link && (
+                            <a
+                                href={link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
+                                aria-label="Open Publication"
+                                title="Open Publication"
+                                className="paper-link"
+                                style={{
+                                    marginTop: "26px",
+                                    color: "inherit",
+                                    textDecoration: "none",
+                                }}
+                            >
+                                <i className="fa-regular fa-newspaper" style={{ fontSize: "28pt" }}></i>
+                            </a>
+                        )}
+                    </div>
                 </span>
                 <div className="hidden" 
                     ref={contentRef}

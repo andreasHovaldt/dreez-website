@@ -24,8 +24,25 @@
     border: 2px solid #35465E;
 }
 
-.project-box:hover {
+.project-box:hover,
+.project-box:focus-visible {
     filter: drop-shadow(0 0 15px #35465E);
     border: 2px solid #5395f2;
     transform: scale(1.02);
+}
+
+/* Make the newspaper link mirror the box hover effect */
+.paper-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent; /* avoid layout shift on hover */
+    border-radius: 6px;
+    transition: transform 0.3s;
+}
+
+.paper-link:hover,
+.paper-link:focus-visible {
+    text-shadow: 0 0 15px #ffffff;
+    transform: scale(1.25);
 }
