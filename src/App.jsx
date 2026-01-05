@@ -11,8 +11,10 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 // Pages
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import MiniProjects from "./pages/MiniProjects";
 import Repositories from "./pages/Repositories";
 import About from "./pages/About";
+import PortfolioSimulator from "./pages/PortfolioSimulator";
 
 
 function App() {
@@ -24,8 +26,10 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home/>}/>
                         <Route path="/projects" element={<Projects/>}/>
+                        <Route path="/miniprojects" element={<MiniProjects/>}/>
                         <Route path="/repositories" element={<Repositories/>}/>
                         <Route path="/about" element={<About/>}/>
+                        <Route path="/retirement" element={<PortfolioSimulator/>}/>
                     </Routes>
                 </main>
             </Router>

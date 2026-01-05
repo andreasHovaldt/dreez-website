@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import Footer from "../components/Footer";
 import GreyBox from "../components/GreyBox";
+import GreyBoxTools from "../components/GreyBoxTools";
 import GreyBoxRepos from "../components/GreyBoxRepos";
 
 import headshot from '../assets/CV_picture_scaled.png';
@@ -89,28 +90,23 @@ function Home() {
                   <h4>Discover my project experiences during my time at Aalborg University, spanning both my Bachelor's and Master's.</h4>
                 </div>
                 <div style={{display: "flex", alignItems: "center", gap: "10pt", marginTop: "-15pt", color:"rgb(23, 202, 247)"}}>
-                  <h4>Click to learn more</h4>
+                  <h4>Click To Learn More!</h4>
                   <i className="fa-solid fa-arrow-right" style={{ fontSize: "15pt" }}></i>
                 </div>
               </GreyBox>
             </Link>
 
-
-            {/* Technical skills dropdown menus*/}
-            {/*
-            <div className="dropdown-container">
-              <div className="dropdown-box">
-                Python
-                <div className="dropdown-menu">
-                  <p>Data Analysis</p>
-                  <p>Web Development</p>
-                  <p>Scripting</p>
-                </div>
-              </div>
+            {/* Featured mini projects */}
+            <div>
+              <h1 style={{marginTop: "40pt", marginBottom: "10pt"}}>Mini Projects</h1>
+              <GreyBoxTools maxItems={3}/>
             </div>
-            */}
-
-
+            <div>
+              <Link to="/miniprojects" className="icon-link">
+                  <p>See All Mini Projects</p>
+                  <i className="fa-solid fa-arrow-right" style={{ fontSize: "15pt" }}></i>
+              </Link>
+            </div>
 
             {/* My top GitHub repositories */}
             <div>
@@ -119,11 +115,10 @@ function Home() {
             </div>
             <div>
               <Link to="/repositories" className="icon-link">
-                  <p>See all repositories</p>
+                  <p>See All Repositories</p>
                   <i className="fa-solid fa-arrow-right" style={{ fontSize: "15pt" }}></i>
               </Link>
             </div>
-
 
             {/* Footer */}
             <div className="true-center">

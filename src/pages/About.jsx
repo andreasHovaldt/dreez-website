@@ -56,7 +56,7 @@ function About() {
             <div>
                 <Link to="/" className="icon-link">
                 <i className="fa-solid fa-arrow-left" style={{ fontSize: "15pt" }}></i>
-                <p>Go back to Home</p>
+                <p>Go Back To Home</p>
                 </Link>
             </div>
 

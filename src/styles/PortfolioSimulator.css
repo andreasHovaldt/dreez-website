@@ -1,0 +1,304 @@
+/* PortfolioSimulator styles */
+
+.simulator-container {
+  padding: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  /* Break out of parent max-width constraint */
+  width: calc(100vw - 3rem);
+  margin-left: calc((100vw - 100%) / -2);
+  margin-right: calc((100vw - 100%) / -2);
+  padding-left: max(1.5rem, calc((100vw - 1400px) / 2));
+  padding-right: max(1.5rem, calc((100vw - 1400px) / 2));
+}
+
+.simulator-title {
+  margin-bottom: 1.5rem;
+  color: #15bbe5;
+  text-align: center;
+}
+
+.simulator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.simulator-card {
+  background-color: #1F2937;
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 2px solid #35465E;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.simulator-card-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #15bbe5;
+  font-size: 1.1rem;
+}
+
+.simulator-label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.simulator-label-text {
+  font-size: 0.875rem;
+  color: rgb(255, 255, 255);
+  display: block;
+  margin-bottom: 0.375rem;
+}
+
+.simulator-slider {
+  width: 100%;
+  cursor: pointer;
+  accent-color: #15bbe5;
+}
+
+.simulator-input {
+  width: 100%;
+  padding: 0.625rem;
+  font-size: 1rem;
+  border: 2px solid #35465E;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #02060f;
+  color: rgb(255, 255, 255);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.simulator-input:focus {
+  border-color: #15bbe5;
+}
+
+.simulator-checkbox {
+  margin-right: 0.5rem;
+  accent-color: #15bbe5;
+}
+
+.simulator-checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.simulator-divider {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #35465E;
+}
+
+.simulator-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.simulator-metric-card {
+  background-color: #1F2937;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #35465E;
+}
+
+.simulator-metric-label {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 0.25rem;
+}
+
+.simulator-metric-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.simulator-chart-card {
+  background-color: #1F2937;
+  padding: 1.25rem;
+  border-radius: 10px;
+  border: 2px solid #35465E;
+  margin-bottom: 1.5rem;
+}
+
+.simulator-info-box {
+  background-color: #1F2937;
+  padding: 1.25rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  color: #888;
+  border: 2px solid #35465E;
+  margin-bottom: 1.5rem;
+}
+
+.simulator-info-paragraph {
+  margin-bottom: 0.5rem;
+}
+
+.simulator-tooltip-container {
+  position: relative;
+  cursor: help;
+}
+
+.simulator-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0.5rem;
+  background-color: #1F2937;
+  color: rgb(255, 255, 255);
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  pointer-events: none;
+  border: 1px solid #35465E;
+}
+
+.simulator-tooltip-arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #1F2937;
+}
+
+.simulator-reroll-button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #15bbe5;
+  color: #02060f;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.simulator-reroll-button:hover {
+  background-color: #5395f2;
+}
+
+.simulator-withdrawal-tooltip {
+  white-space: normal;
+  width: 220px;
+  text-align: left;
+}
+
+.simulator-breakdown-card {
+  background-color: #1F2937;
+  border-radius: 10px;
+  border: 2px solid #35465E;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.simulator-breakdown-header {
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1F2937;
+  transition: background-color 0.2s ease;
+}
+
+.simulator-breakdown-header:hover {
+  background-color: #283447;
+}
+
+.simulator-breakdown-title {
+  font-weight: 600;
+  color: #15bbe5;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.simulator-breakdown-arrow {
+  color: #15bbe5;
+  font-size: 0.875rem;
+  transition: transform 0.2s ease;
+}
+
+.simulator-breakdown-content {
+  max-height: 400px;
+  overflow-y: auto;
+  border-top: 1px solid #35465E;
+}
+
+.simulator-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.simulator-table-header {
+  background-color: #02060f;
+  position: sticky;
+  top: 0;
+}
+
+.simulator-th {
+  padding: 0.75rem 1rem;
+  text-align: right;
+  color: #888;
+  font-weight: 600;
+  border-bottom: 1px solid #35465E;
+}
+
+.simulator-th-first {
+  text-align: left;
+}
+
+.simulator-td {
+  padding: 0.5rem 1rem;
+  text-align: right;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid #35465E;
+}
+
+.simulator-td-first {
+  text-align: left;
+}
+
+.simulator-td-positive {
+  color: #22c55e;
+}
+
+.simulator-td-negative {
+  color: #ef4444;
+}
+
+.simulator-row-retirement {
+  background-color: rgba(21, 187, 229, 0.1);
+}
+
+.simulator-percentile-select {
+  padding: 0.25rem 0.5rem;
+  background-color: #02060f;
+  color: rgb(255, 255, 255);
+  border: 1px solid #35465E;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.simulator-percentile-select:focus {
+  outline: none;
+  border-color: #15bbe5;
+}
