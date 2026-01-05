@@ -7,9 +7,9 @@ import GreyBoxTools from "../components/GreyBoxTools";
 import GreyBoxRepos from "../components/GreyBoxRepos";
 
 import headshot from '../assets/CV_picture_scaled.png';
+import cvIcon from '../assets/cv_icon.png';
 
 import "../styles/Home.css"
-//import "../styles/Dropdown.css"
 
 function Home() {
   useEffect(() => {
@@ -55,6 +55,10 @@ function Home() {
                       <div className="true-center">
                         <div className="buttonflex">
                           
+                          <Link to="/cv" className="icon-btn">
+                            <img src={cvIcon} alt="CV" className="cv-icon" style={{ height: "55px" }} />
+                          </Link>
+
                           <a href="https://github.com/andreasHovaldt" target="_blank" rel="noopener noreferrer" className="icon-btn">
                             <i className="fa-brands fa-github"></i>
                           </a>
@@ -66,7 +70,6 @@ function Home() {
                           <a href="mailto:andreas.hovaldt@gmail.com" className="icon-btn">
                             <i className="fa-regular fa-envelope"></i>
                           </a>
-                        
                         </div>
                       </div>
                     </td>
