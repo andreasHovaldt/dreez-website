@@ -30,16 +30,16 @@
 .imageflexcontent { margin-left: 10px; margin-top: -2px; }
 
 
-.buttonflex { display: flex; gap: 70pt; }
+.buttonflex { display: flex; gap: 60pt; }
 
-.buttonflex a {
-  font-weight: 500;
-  color: #ffffff;
-  text-decoration: inherit;
+.cv-icon {
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+  margin-top: 19px;
 }
 
-.buttonflex a:hover {
-  color: #5395f2;
+.icon-btn:hover .cv-icon {
+  filter: invert(52%) sepia(93%) saturate(1352%) hue-rotate(200deg) brightness(102%) contrast(90%);
 }
 
 .icon-btn {

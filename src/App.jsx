@@ -14,6 +14,7 @@ import Projects from "./pages/Projects";
 import MiniProjects from "./pages/MiniProjects";
 import Repositories from "./pages/Repositories";
 import About from "./pages/About";
+import CV from "./pages/CV";
 import PortfolioSimulator from "./pages/PortfolioSimulator";
 
 
@@ -29,6 +30,7 @@ function App() {
                         <Route path="/miniprojects" element={<MiniProjects/>}/>
                         <Route path="/repositories" element={<Repositories/>}/>
                         <Route path="/about" element={<About/>}/>
+                        <Route path="/cv" element={<CV/>}/>
                         <Route path="/retirement" element={<PortfolioSimulator/>}/>
                     </Routes>
                 </main>
