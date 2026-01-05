@@ -21,6 +21,11 @@
     font-size: 18px;
     margin-bottom: -5px;
     margin-top: -5px;
+    max-width: 100%;
+    /* Robust wrapping for long/no-space repo names */
+    overflow-wrap: anywhere; /* modern browsers */
+    word-break: break-word;  /* WebKit/Safari compatibility */
+    hyphens: auto;           /* allow hyphenation when possible */
 }
 
 .repo-box p {
@@ -43,7 +48,7 @@
     background-color: transparent;
     padding: 5px 10px;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .repo-info a {

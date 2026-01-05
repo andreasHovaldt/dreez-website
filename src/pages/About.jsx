@@ -39,10 +39,10 @@ function About() {
                         I have written all university projects in English, including my Bachelor's thesis. 
                         Additionally, I have collaborated with English-speaking supervisors and group members across several semesters.
                     </p>
-                    <p style={{fontSize:"16pt", fontStyle:"italic", fontWeight:"bold"}}>
+                    {/* <p style={{fontSize:"16pt", fontStyle:"italic", fontWeight:"bold"}}>
                     I am currently seeking an internship position for the fall semester of 2025. 
                     While I am particularly interested in opportunities within AI, Vision, and Sound, I am open to other roles that can help me grow and develop as a computer engineer.
-                    </p>
+                    </p> */}
                     <p style={{fontSize:"16pt"}}>
                         In my free time, I continue to explore my interest in tech and automation, staying up to date with the latest trends and technologies. 
                         I have worked on several personal projects, including a small 3D-printed self-driving car and a simple home-monitoring system using an Arduino or Raspberry Pi. 
