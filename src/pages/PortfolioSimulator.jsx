@@ -669,9 +669,9 @@ function PortfolioSimulator() {
 
       {/* Back navigation */}
       <div>
-        <Link to="/" className="icon-link">
+        <Link to="/miniprojects" className="icon-link">
           <i className="fa-solid fa-arrow-left" style={{ fontSize: "15pt" }}></i>
-          <p>Go back to Home</p>
+          <p>Go Back To Mini Projects Overview</p>
         </Link>
       </div>
 
