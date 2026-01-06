@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "../styles/GreyBoxTools.css";
 import GreyBox from "./GreyBox";
 
+import DinoIcon from "../assets/dino_game.png";
+
 // Define mini projects here
 const miniProjects = [
     {
@@ -19,7 +21,7 @@ const miniProjects = [
         description: "Play the well known Chrome Dino Game with a twist.",
         link: "https://pages.dreez.dk/",
         external: true, // Opens in new tab
-        thumbnail: null,
+        thumbnail: DinoIcon,
         icon: "fa-solid fa-gamepad"
     },
     // {
