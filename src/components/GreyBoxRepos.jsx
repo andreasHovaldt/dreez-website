@@ -6,23 +6,42 @@ function GreyBoxRepos({ slice = true }) {
     const [repos, setRepos] = useState([]);
 
     useEffect(() => {
+        const CACHE_KEY = "github_repos_cache";
+        const CACHE_TTL = 10 * 60 * 1000; // 10 minutes
+
         const fetchRepos = async () => {
+            // Check localStorage cache
+            try {
+                const cached = JSON.parse(localStorage.getItem(CACHE_KEY));
+                if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
+                    let sortedRepos = cached.data;
+                    if (slice) sortedRepos = sortedRepos.slice(0, 6);
+                    setRepos(sortedRepos);
+                    return;
+                }
+            } catch { /* invalid cache, proceed to fetch */ }
+
             try {
                 const response = await fetch(
                     "https://api.github.com/users/andreasHovaldt/repos?sort=updated"
                 );
                 const data = await response.json();
-                
-                // Sort by stars or other criteria
-                let sortedRepos = data.sort((a, b) => b.stargazers_count - a.stargazers_count);
-                
-                // Slice only if the `slice` prop is true
-                if (slice) {
-                    sortedRepos = sortedRepos.slice(0, 6);
+
+                if (!Array.isArray(data)) {
+                    console.error("Unexpected GitHub API response:", data);
+                    return;
                 }
 
-                // Basically return
-                setRepos(sortedRepos);
+                // Sort by stars or other criteria
+                const sortedRepos = data.sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+                // Cache the full sorted list
+                localStorage.setItem(CACHE_KEY, JSON.stringify({
+                    data: sortedRepos,
+                    timestamp: Date.now(),
+                }));
+
+                setRepos(slice ? sortedRepos.slice(0, 6) : sortedRepos);
 
             } catch (error) {
                 console.error("Error fetching repos:", error);
