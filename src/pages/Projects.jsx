@@ -37,11 +37,16 @@ function Projects() {
             </div>
 
             <div style={{marginTop: "-20pt"}}>
-              <GreyBoxProjects title="3rd Semester: CERN Internship" 
-                              description="Designing and verifying neural network–based control systems, with a focus on implementation and formal verification to ensure reliability and safety."
-                              abstract="TDB">
+              <GreyBoxProjects title="4th Semester: A General Architecture for 3D Perception in Agriculture" 
+                              description="Exploring A Unified Approach to Multi-task 3D Perception"
+                              abstract="TBD (February 2026 → June 2026)">
               </GreyBoxProjects>
             </div>
+
+            <GreyBoxProjects title="3rd Semester: CERN Internship" 
+                              description="Development of neural network approximations of Model Predictive Controllers for HVAC air handling units at CERN's SR1 testing facility, encompassing data pipeline development, model training, and closed-loop simulation deployment."
+                              abstract="Model Predictive Control offers good performance for HVAC systems through its ability to optimize control actions over a prediction horizon, while satisfying operational constraints. However, the computational burden of solving online optimization problems limits deployment on resource-constrained industrial controllers. This project investigates the approximation of an economic MPC solution for HVAC control at CERN's SR1 facility using neural networks, with the goal of reducing computational requirements while preserving control performance. A complete pipeline was developed, comprising data extraction and dataset creation, a modular training framework supporting multiple neural network architectures, and integration with an EcosimPro digital twin for closed-loop evaluation. MLP-, TCN-, and transformer-based models were implemented and compared. The transformer architecture achieved the best performance, with an $R^2$ of 0.995 for actuator regression and 94.03% class-averaged accuracy for mode classification. In closed-loop simulation, the neural network controller maintained zone temperatures within specified bounds over a week-long evaluation period, while reducing computation time by a factor of approximately 460 compared to the MPC.">
+            </GreyBoxProjects>
 
             <GreyBoxProjects title="2nd Semester: Personal Sound Zones for Smartphones" 
                               description="Deep learning-based sound zone control system for smartphones to enhance phone call privacy in public spaces, using only native loudspeakers and microphones, trained on synthetically generated room impulse responses."
