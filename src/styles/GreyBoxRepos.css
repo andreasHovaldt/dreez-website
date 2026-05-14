@@ -9,12 +9,12 @@
   width: 260px;
   height: 200px;
   padding: 20px;
-  background-color: #1f2937;
+  background-color: var(--surface);
   border-radius: 20px;
   color: white;
   text-align: left;
   transition: transform 0.3s, filter 0.3s;
-  border: 2px solid #35465e;
+  border: 2px solid var(--border);
 }
 
 .repo-box h2 {
@@ -35,7 +35,7 @@
 
 .repo-info {
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -49,6 +49,10 @@
   font-size: 14px;
 }
 
+.repo-info span.repo-language {
+  background-color: var(--surface-alt);
+}
+
 .repo-info a {
   color: white;
   text-decoration: none;
@@ -59,12 +63,12 @@
 
 @media (hover: hover) and (pointer: fine) {
   .repo-info a:hover {
-    color: #5395f2;
+    color: var(--accent-hover);
   }
 
   .repo-box:hover {
-    filter: drop-shadow(0 0 15px #35465e);
-    border: 2px solid #5395f2;
+    filter: drop-shadow(0 0 15px var(--border));
+    border: 2px solid var(--accent-hover);
     transform: scale(1.08);
   }
 }

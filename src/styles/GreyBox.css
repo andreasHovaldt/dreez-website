@@ -1,10 +1,10 @@
 .GreyBox {
-  background-color: #1f2937;
-  color: white;
+  background-color: var(--surface);
+  color: var(--text);
   padding: 0 20px;
   max-width: 1000px;
   margin: 20px auto;
-  border: 2px solid #35465e;
+  border: 2px solid var(--border);
   border-radius: 10px;
   display: grid;
   transition: filter 0.3s ease, transform 0.3s ease;
@@ -21,7 +21,7 @@
   }
 
   .GreyBox.active:hover {
-    filter: drop-shadow(0 0 5pt #35465e);
+    filter: drop-shadow(0 0 5pt var(--border));
     transform: scale(1.15);
   }
 

@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgb(255, 255, 255);
-  background-color: #02060f;
+  background-color: var(--bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -57,22 +57,9 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: rgb(255, 255, 255);
-    background-color: #02060f;
-  }
-  
-  button {
-    color: rgb(255, 255, 255);
-    background-color: #1a1a1a;
-  }
-}
-
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 100%; /* Ensure the body grows with content */
-  /*overflow-x: hidden; /* Prevent horizontal scrolling if content overflows */
+  min-height: 100%;
 }

@@ -18,7 +18,7 @@ function Home() {
 
   return (
     <>
-      <GreyBox className="home-hero" style={{ marginTop: "40pt", paddingTop: "10pt", paddingBottom: "10pt" }}>
+      <GreyBox className="home-hero">
         <div className="home-hero-layout">
           <div className="home-hero-image-wrap">
             <Link to="/about">
@@ -42,8 +42,8 @@ function Home() {
 
           <div className="true-center home-hero-location">
             <div className="imageflex">
-              <i className="fa-solid fa-location-dot" style={{ fontSize: "20pt" }}></i>
-              <p className="imageflexcontent" style={{ fontSize: "16pt", fontStyle: "italic", fontWeight: "lighter" }}>
+              <i className="fa-solid fa-location-dot icon-lg"></i>
+              <p className="imageflexcontent">
                 Aalborg, Denmark
               </p>
             </div>
@@ -51,7 +51,7 @@ function Home() {
 
           <div className="socials home-hero-socials">
             <Link to="/cv" className="icon-btn" aria-label="CV">
-              <img src={cvIcon} alt="CV" className="cv-icon" style={{ height: "55px" }} />
+              <img src={cvIcon} alt="CV" className="cv-icon" />
             </Link>
 
             <a href="https://github.com/andreasHovaldt" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="GitHub">
@@ -70,9 +70,9 @@ function Home() {
       </GreyBox>
 
       <Link to="/projects">
-        <GreyBox className="projects projects-cta" style={{ paddingBottom: "4px" }}>
+        <GreyBox className="projects projects-cta">
           <div className="projects-cta-title">
-            <i className="fa-solid fa-graduation-cap" style={{ fontSize: "20pt" }}></i>
+            <i className="fa-solid fa-graduation-cap icon-lg"></i>
             <h2>Explore My University Projects!</h2>
           </div>
           <div>
@@ -83,7 +83,7 @@ function Home() {
           </div>
           <div className="projects-cta-tail">
             <h4>Click To Learn More!</h4>
-            <i className="fa-solid fa-arrow-right" style={{ fontSize: "15pt" }}></i>
+            <i className="fa-solid fa-arrow-right icon-md"></i>
           </div>
         </GreyBox>
       </Link>
@@ -95,7 +95,7 @@ function Home() {
       <div>
         <Link to="/miniprojects" className="icon-link">
           <p>See All Mini Projects</p>
-          <i className="fa-solid fa-arrow-right" style={{ fontSize: "15pt" }}></i>
+          <i className="fa-solid fa-arrow-right icon-md"></i>
         </Link>
       </div>
 
@@ -106,7 +106,7 @@ function Home() {
       <div>
         <Link to="/repositories" className="icon-link">
           <p>See All Repositories</p>
-          <i className="fa-solid fa-arrow-right" style={{ fontSize: "15pt" }}></i>
+          <i className="fa-solid fa-arrow-right icon-md"></i>
         </Link>
       </div>
 

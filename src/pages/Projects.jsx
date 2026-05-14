@@ -20,15 +20,6 @@ function Projects() {
                 <h1>This page is dedicated to my projects!</h1>
             </div>
 
-            {/* Under construction */}
-            <div className="true-center blue-color" style={{ display: "flex", gap: "10pt", marginTop: "20pt" }}>
-                <i className="fa-solid fa-person-digging" style={{ fontSize: "20pt", marginRight: "-10pt" }}></i>
-                <h2 className="blue-color"></h2>
-                <h2 className="blue-color">Page is under construction</h2>
-                <i className="fa-solid fa-tools" style={{ fontSize: "20pt" }}></i>
-            </div>
-
-
             {/* Master's in Computer Engineering */}
             <div className="projects-heading-wrap">
               <h1>Master's in Computer Engineering</h1>
@@ -98,7 +89,7 @@ function Projects() {
 
             <div>
                 <Link to="/" className="icon-link">
-                <i className="fa-solid fa-arrow-left" style={{ fontSize: "15pt" }}></i>
+                <i className="fa-solid fa-arrow-left icon-md"></i>
                 <p>Go Back To Home</p>
                 </Link>
             </div>
