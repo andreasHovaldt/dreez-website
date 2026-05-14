@@ -16,7 +16,7 @@ function MiniProjects() {
         <>
             {/* All Mini Projects */}
             <div>
-                <h1 className="true-center" style={{marginTop: "40pt", marginBottom: "20pt", fontSize: "50pt"}}>My Mini Projects</h1>
+                <h1 className="true-center mini-projects-title" style={{marginTop: "40pt", marginBottom: "20pt"}}>My Mini Projects</h1>
                 <p className="true-center" style={{marginBottom: "30pt", color: "#9CA3AF", fontStyle: "italic"}}>
                     A collection of small tools, calculators, and games.
                 </p>

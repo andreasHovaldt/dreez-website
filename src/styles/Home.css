@@ -1,14 +1,14 @@
 .Home {
-    position: static;
-    width: 100%;
-    top: 50px;
-    text-align: center;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    flex-direction: column; /* Stacks elements vertically */
-  }
+  position: static;
+  width: 100%;
+  top: 50px;
+  text-align: center;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 .true-center {
   display: flex;
@@ -21,54 +21,289 @@
   color: #15bbe5;
 }
 
+.greyboxflex {
+  display: flex;
+  gap: 20pt;
+}
 
-.greyboxflex { display: flex; gap: 20pt; }
-.greyboxflexcontent { margin-left: 10px; margin-top: -6px; }
+.greyboxflexcontent {
+  margin-left: 10px;
+  margin-top: -6px;
+}
 
+.imageflex {
+  display: flex;
+}
 
-.imageflex { display: flex; }
-.imageflexcontent { margin-left: 10px; margin-top: -2px; }
+.imageflexcontent {
+  margin-left: 10px;
+  margin-top: -2px;
+}
 
-
-.buttonflex { display: flex; gap: 60pt; }
+.buttonflex {
+  display: flex;
+  gap: 60pt;
+}
 
 .cv-icon {
   filter: brightness(0) invert(1);
   transition: filter 0.3s ease;
-  margin-top: 19px;
-}
-
-.icon-btn:hover .cv-icon {
-  filter: invert(52%) sepia(93%) saturate(1352%) hue-rotate(200deg) brightness(102%) contrast(90%);
 }
 
 .icon-btn {
-  background-color: transparent; /* Blue background */
-  border: none; /* Remove borders */
-  color: white; /* White text */
-  padding: 0px 10px; /* Some padding */
-  font-size: 60px; /* Set a font size */
-  cursor: pointer; /* Mouse pointer on hover */
-  transition: filter 0.3s ease, transform 0.3s ease;
-}
-.icon-btn:hover {
-  color: #5395f2;
-  filter: drop-shadow(0 0 15pt #0f728a);
-  transform: scale(1.1); /* Optional scaling effect */
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 0 10px;
+  font-size: 60px;
+  cursor: pointer;
+  transition:
+    filter 0.3s ease,
+    transform 0.3s ease,
+    color 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-link {
   display: flex;
   justify-content: center;
-  align-items: center; 
-  gap: 10pt; 
+  align-items: center;
+  gap: 10pt;
   margin-top: -10pt;
   color: #15bbe5;
-  transition: filter 0.3s ease, transform 0.3s ease;
+  transition:
+    filter 0.3s ease,
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
-.icon-link:hover {
-  color: #5395f2;
-  filter: drop-shadow(0 0 15pt #0f728a);
-  transform: scale(1.1); /* Optional scaling effect */
+.home-hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "image copy"
+    "location socials";
+  column-gap: 20pt;
+  row-gap: 8pt;
+  align-items: center;
+}
+
+.home-hero-image-wrap {
+  grid-area: image;
+  display: flex;
+  justify-content: center;
+}
+
+.home-hero-copy {
+  grid-area: copy;
+  text-align: left;
+}
+
+.home-hero-location {
+  grid-area: location;
+}
+
+.home-hero-socials {
+  grid-area: socials;
+  justify-content: center;
+  margin-top: -10pt;
+}
+
+.socials.home-hero-socials {
+  gap: 60pt;
+  {{/* margin-top: -10pt; */}}
+}
+
+.home-hero-image {
+  max-width: 200pt;
+  border: 5px solid #15bbe5;
+  border-radius: 50%;
+}
+
+.home-hero-intro {
+  font-size: 16pt;
+  font-style: italic;
+}
+
+.home-section-title {
+  margin-top: 40pt;
+  margin-bottom: 10pt;
+}
+
+.mini-projects-title,
+.repositories-title {
+  font-size: 50pt;
+}
+
+.projects-cta {
+  background-color: #107e9a;
+  border: none;
+}
+
+.projects-cta-title {
+  display: flex;
+  align-items: center;
+  gap: 10pt;
+}
+
+.projects-cta h4 {
+  margin: 4px 0;
+}
+
+.projects-cta-tail {
+  display: flex;
+  align-items: center;
+  gap: 10pt;
+  color: rgb(23, 202, 247);
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 18px;
+  align-items: center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .icon-btn:hover {
+    color: #5395f2;
+    filter: drop-shadow(0 0 15pt #0f728a);
+    transform: scale(1.1);
+  }
+
+  .icon-link:hover {
+    color: #5395f2;
+    filter: drop-shadow(0 0 15pt #0f728a);
+    transform: scale(1.1);
+  }
+
+  .icon-btn:hover .cv-icon {
+    filter: invert(52%) sepia(93%) saturate(1352%) hue-rotate(200deg)
+      brightness(102%) contrast(90%);
+  }
+}
+
+@media (max-width: 767px) {
+  .home-hero {
+    margin-top: 16px !important;
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .home-hero-layout {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+    column-gap: 0;
+  }
+
+  .home-hero-copy {
+    text-align: center;
+  }
+
+  .home-hero-copy h1 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 0 0 10px;
+    text-align: center;
+    letter-spacing: -0.3px;
+  }
+
+  .home-hero-intro {
+    font-size: 14.5px;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+  }
+
+  .home-hero-image {
+    width: 132px;
+    height: 132px;
+    max-width: none;
+    object-fit: cover;
+    border-width: 4px;
+    margin-bottom: 16px;
+  }
+
+  .imageflex {
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .imageflexcontent {
+    margin: 0;
+    font-size: 14px !important;
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .socials {
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 18px;
+    gap: 0;
+  }
+
+  .icon-btn {
+    font-size: 34px;
+    padding: 0;
+  }
+
+  .cv-icon {
+    margin-top: 0;
+    height: 40px !important;
+  }
+
+  .home-section-title {
+    margin-top: 32px;
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: -0.4px;
+  }
+
+  .projects-cta {
+    border-radius: 16px;
+  }
+
+  .projects-cta h2 {
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .projects-cta h4 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.45;
+    margin: 6px 0 12px;
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  .icon-link {
+    margin-top: 14px;
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .mini-projects-title {
+    font-size: 34px;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+  }
+
+  .repositories-title {
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    text-align: center;
+  }
 }
