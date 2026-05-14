@@ -3,6 +3,25 @@
   margin: 0 auto;
 }
 
+@media (max-width: 1023px) {
+  #root {
+    max-width: 92vw;
+  }
+}
+
+@media (max-width: 767px) {
+  #root {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  main {
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+}
+
 /*
 
 .App-text {

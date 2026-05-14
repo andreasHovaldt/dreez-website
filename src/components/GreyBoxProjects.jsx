@@ -23,10 +23,9 @@ function GreyBoxProjects({ title, description, abstract, link }) {
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
-                            flex: "0 0 44px",
-                            width: "44px",
-                            marginTop: "25pt",
-                            marginLeft: "-5pt",
+                            flex: "0 0 32px",
+                            width: "32px",
+                            marginTop: "4px",
                         }}
                     >
                         <i
@@ -59,10 +58,10 @@ function GreyBoxProjects({ title, description, abstract, link }) {
                         maxHeight: isOpen ? `${contentRef.current?.scrollHeight}px` : "0px",
                         transition: "max-height 0.5s ease-in-out",
                         marginLeft: "10px",
-                        marginTop: "-10px",
+                        marginTop: "10px",
                     }}>
                     <h2>Abstract:</h2>
-                    <p style={{ marginTop: "-15pt" }}>{abstract}</p>
+                    <p style={{ marginTop: "0" }}>{abstract}</p>
                 </div>
             </div>
         </GreyBox>

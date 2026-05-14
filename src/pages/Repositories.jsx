@@ -10,14 +10,14 @@ import "../styles/Home.css"
 
 function Repositories() {
   useEffect(() => {
-        document.title = "About";
+        document.title = "Repositories";
       }, []);
   
   return (
         <>
             {/* All my GitHub repositories */}
             <div>
-              <h1 className="true-center" style={{marginTop: "40pt", marginBottom: "20pt", fontSize: "50pt"}}>All My GitHub Repositories</h1>
+              <h1 className="true-center repositories-title" style={{marginTop: "40pt", marginBottom: "20pt"}}>All My GitHub Repositories</h1>
               <GreyBoxRepos slice={false}/>
             </div>
             <div>

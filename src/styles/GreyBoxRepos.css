@@ -1,70 +1,97 @@
 .repos-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .repo-box {
-    width: 260px;
-    height: 200px;
-    padding: 20px;
-    background-color: #1F2937;
-    border-radius: 20px;
-    color: white;
-    text-align: left;
-    transition: transform 0.3s, filter 0.3s;
-    border: 2px solid #35465E;
+  width: 260px;
+  height: 200px;
+  padding: 20px;
+  background-color: #1f2937;
+  border-radius: 20px;
+  color: white;
+  text-align: left;
+  transition: transform 0.3s, filter 0.3s;
+  border: 2px solid #35465e;
 }
 
 .repo-box h2 {
-    font-size: 18px;
-    margin-bottom: -5px;
-    margin-top: -5px;
-    max-width: 100%;
-    /* Robust wrapping for long/no-space repo names */
-    overflow-wrap: anywhere; /* modern browsers */
-    word-break: break-word;  /* WebKit/Safari compatibility */
-    hyphens: auto;           /* allow hyphenation when possible */
+  font-size: 18px;
+  margin-bottom: -5px;
+  margin-top: -5px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .repo-box p {
-    font-size: 14px;
-    font-style: italic;
-    margin-bottom: 10px;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 10px;
 }
 
 .repo-info {
-    display: flex;
-    align-items: center;
-    justify-content:left;
-    align-items: center;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
 .repo-info span {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    background-color: transparent;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background-color: transparent;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 .repo-info a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    transition: color 0.3s;
-    margin-left: auto;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+  margin-left: auto;
 }
 
-.repo-info a:hover {
-    color: #5395f2; /* Light blue */
-}
+@media (hover: hover) and (pointer: fine) {
+  .repo-info a:hover {
+    color: #5395f2;
+  }
 
-.repo-box:hover {
-    filter: drop-shadow(0 0 15px #35465E);
+  .repo-box:hover {
+    filter: drop-shadow(0 0 15px #35465e);
     border: 2px solid #5395f2;
     transform: scale(1.08);
+  }
+}
+
+@media (max-width: 767px) {
+  .repos-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .repo-box {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .repo-box h2 {
+    margin: 0 0 4px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .repo-box p {
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
 }

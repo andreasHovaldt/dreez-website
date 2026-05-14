@@ -2,8 +2,22 @@ import React, { useEffect, useState } from "react";
 import "../styles/GreyBoxRepos.css";
 import GreyBox from "./GreyBox";
 
-function GreyBoxRepos({ slice = true }) {
+function GreyBoxRepos({ slice = true, mobileMaxItems = null }) {
     const [repos, setRepos] = useState([]);
+    const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 767);
+
+    useEffect(() => {
+        const onResize = () => setIsMobile(window.innerWidth <= 767);
+        window.addEventListener("resize", onResize);
+        return () => window.removeEventListener("resize", onResize);
+    }, []);
+
+    const getSliceCount = React.useCallback(() => {
+        if (mobileMaxItems && isMobile) {
+            return mobileMaxItems;
+        }
+        return 6;
+    }, [mobileMaxItems, isMobile]);
 
     useEffect(() => {
         const CACHE_KEY = "github_repos_cache";
@@ -15,7 +29,7 @@ function GreyBoxRepos({ slice = true }) {
                 const cached = JSON.parse(localStorage.getItem(CACHE_KEY));
                 if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
                     let sortedRepos = cached.data;
-                    if (slice) sortedRepos = sortedRepos.slice(0, 6);
+                    if (slice) sortedRepos = sortedRepos.slice(0, getSliceCount());
                     setRepos(sortedRepos);
                     return;
                 }
@@ -41,7 +55,7 @@ function GreyBoxRepos({ slice = true }) {
                     timestamp: Date.now(),
                 }));
 
-                setRepos(slice ? sortedRepos.slice(0, 6) : sortedRepos);
+                setRepos(slice ? sortedRepos.slice(0, getSliceCount()) : sortedRepos);
 
             } catch (error) {
                 console.error("Error fetching repos:", error);
@@ -49,7 +63,7 @@ function GreyBoxRepos({ slice = true }) {
         };
 
         fetchRepos();
-    }, [slice]);
+    }, [slice, getSliceCount]);
 
     return (
         <div className="repos-container">

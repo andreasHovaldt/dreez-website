@@ -6,128 +6,114 @@ import GreyBox from "../components/GreyBox";
 import GreyBoxTools from "../components/GreyBoxTools";
 import GreyBoxRepos from "../components/GreyBoxRepos";
 
-import headshot from '../assets/CV_picture_scaled.png';
-import cvIcon from '../assets/cv_icon.png';
+import headshot from "../assets/CV_picture_scaled.png";
+import cvIcon from "../assets/cv_icon.png";
 
-import "../styles/Home.css"
+import "../styles/Home.css";
 
 function Home() {
   useEffect(() => {
-        document.title = "Andreas Højrup";
-      }, []);
-  
+    document.title = "Andreas Højrup";
+  }, []);
+
   return (
-        <>
-            <GreyBox style = {{marginTop:"40pt", paddingTop:"10pt"}}>
-                <div>
-                <table align="left">
-                  <tbody>
-                  {/* Image and text */}
-                  <tr>
-                    <td>
-                      <Link to="/about">
-                      <img src={headshot} alt="Image of Andreas Hovaldt Højrup" style={{maxWidth:"200pt", border:"5px solid #15bbe5", borderRadius:"50%"}}/>
-                      </Link>
-                    </td>
-                    <td align="left" style={{paddingLeft:"20pt"}}>
-                      <h1 className="blue-color">Welcome to my website!</h1>
-                      <p className="blue-color" style={{fontSize:"16pt", fontStyle:"italic", }}>
-                        My name is Andreas Hovaldt Højrup and I'm a student at Aalborg University.
-                        I completed my Bachelor's in Robotics in the summer of 2024. 
-                        Currently I'm pursuing a Master's in Computer Engineering, specifically specializing in AI, Vision and Sound.
-                      </p>
-                    </td>
-                  </tr>
+    <>
+      <GreyBox className="home-hero" style={{ marginTop: "40pt", paddingTop: "10pt", paddingBottom: "10pt" }}>
+        <div className="home-hero-layout">
+          <div className="home-hero-image-wrap">
+            <Link to="/about">
+              <img
+                src={headshot}
+                alt="Image of Andreas Hovaldt Højrup"
+                className="home-hero-image"
+              />
+            </Link>
+          </div>
 
-                  <tr>
-                    {/* Location pin*/}
-                    <td>
-                      <div className="true-center">
-                        <div className="imageflex">
-                          <i className="fa-solid fa-location-dot" style={{ fontSize: "20pt" }}></i>
-                          <p className="imageflexcontent" style={{fontSize:"16pt", fontStyle:"italic", fontWeight:"lighter"}}>Aalborg, Denmark</p> 
-                        </div>
-                      </div>
-                    </td>
-                    
-                    {/* Social media buttons*/}
-                    <td align="center">
-                      <div className="true-center">
-                        <div className="buttonflex">
-                          
-                          <Link to="/cv" className="icon-btn">
-                            <img src={cvIcon} alt="CV" className="cv-icon" style={{ height: "55px" }} />
-                          </Link>
+          <div className="home-hero-copy">
+            <h1 className="blue-color">Welcome to my website!</h1>
+            <p className="blue-color home-hero-intro">
+              My name is Andreas Hovaldt Højrup and I'm a student at Aalborg University.
+              I completed my Bachelor's in Robotics in the summer of 2024. Currently I'm
+              pursuing a Master's in Computer Engineering, specifically specializing in AI,
+              Vision and Sound.
+            </p>
+          </div>
 
-                          <a href="https://github.com/andreasHovaldt" target="_blank" rel="noopener noreferrer" className="icon-btn">
-                            <i className="fa-brands fa-github"></i>
-                          </a>
-                          
-                          <a href="https://linkedin.com/in/andreas-hovaldt" target="_blank" rel="noopener noreferrer" className="icon-btn">
-                            <i className="fa-brands fa-linkedin"></i>
-                          </a>
-                          
-                          <a href="mailto:andreas.hovaldt@gmail.com" className="icon-btn">
-                            <i className="fa-regular fa-envelope"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  
-                  </tbody>
-                </table>
-                </div>
+          <div className="true-center home-hero-location">
+            <div className="imageflex">
+              <i className="fa-solid fa-location-dot" style={{ fontSize: "20pt" }}></i>
+              <p className="imageflexcontent" style={{ fontSize: "16pt", fontStyle: "italic", fontWeight: "lighter" }}>
+                Aalborg, Denmark
+              </p>
+            </div>
+          </div>
 
-            </GreyBox>
-            
-            {/* Explore my projects */}
-            <Link to="/projects">
-              <GreyBox className="projects" style={{backgroundColor:"rgb(16, 126, 154)", border: "none"}}>
-                <div style={{display: "flex", alignItems: "center", gap: "10pt"}}>
-                  <i className="fa-solid fa-graduation-cap" style={{ fontSize: "20pt" }}></i>
-                  <h2>Explore My University Projects!</h2> 
-                </div>
-                <div style={{display: "flex", marginTop: "-25pt"}}>
-                  {/* <h4>Delve into my project experiences while studying at Aalborg University for both my Bachelor's and Master's.</h4> */}
-                  <h4>Discover my project experiences during my time at Aalborg University, spanning both my Bachelor's and Master's.</h4>
-                </div>
-                <div style={{display: "flex", alignItems: "center", gap: "10pt", marginTop: "-15pt", color:"rgb(23, 202, 247)"}}>
-                  <h4>Click To Learn More!</h4>
-                  <i className="fa-solid fa-arrow-right" style={{ fontSize: "15pt" }}></i>
-                </div>
-              </GreyBox>
+          <div className="socials home-hero-socials">
+            <Link to="/cv" className="icon-btn" aria-label="CV">
+              <img src={cvIcon} alt="CV" className="cv-icon" style={{ height: "55px" }} />
             </Link>
 
-            {/* Featured mini projects */}
-            <div>
-              <h1 style={{marginTop: "40pt", marginBottom: "10pt"}}>Mini Projects</h1>
-              <GreyBoxTools maxItems={3}/>
-            </div>
-            <div>
-              <Link to="/miniprojects" className="icon-link">
-                  <p>See All Mini Projects</p>
-                  <i className="fa-solid fa-arrow-right" style={{ fontSize: "15pt" }}></i>
-              </Link>
-            </div>
+            <a href="https://github.com/andreasHovaldt" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="GitHub">
+              <i className="fa-brands fa-github"></i>
+            </a>
 
-            {/* My top GitHub repositories */}
-            <div>
-              <h1 style={{marginTop: "40pt", marginBottom: "10pt"}}>My GitHub Repositories</h1>
-              <GreyBoxRepos/>
-            </div>
-            <div>
-              <Link to="/repositories" className="icon-link">
-                  <p>See All Repositories</p>
-                  <i className="fa-solid fa-arrow-right" style={{ fontSize: "15pt" }}></i>
-              </Link>
-            </div>
+            <a href="https://linkedin.com/in/andreas-hovaldt" target="_blank" rel="noopener noreferrer" className="icon-btn" aria-label="LinkedIn">
+              <i className="fa-brands fa-linkedin"></i>
+            </a>
 
-            {/* Footer */}
-            <div className="true-center">
-              <Footer/>
-            </div>
-        </>
+            <a href="mailto:andreas.hovaldt@gmail.com" className="icon-btn" aria-label="Email">
+              <i className="fa-regular fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </GreyBox>
+
+      <Link to="/projects">
+        <GreyBox className="projects projects-cta" style={{ paddingBottom: "4px" }}>
+          <div className="projects-cta-title">
+            <i className="fa-solid fa-graduation-cap" style={{ fontSize: "20pt" }}></i>
+            <h2>Explore My University Projects!</h2>
+          </div>
+          <div>
+            <h4>
+              Discover my project experiences during my time at Aalborg University, spanning
+              both my Bachelor's and Master's.
+            </h4>
+          </div>
+          <div className="projects-cta-tail">
+            <h4>Click To Learn More!</h4>
+            <i className="fa-solid fa-arrow-right" style={{ fontSize: "15pt" }}></i>
+          </div>
+        </GreyBox>
+      </Link>
+
+      <div>
+        <h1 className="home-section-title">Mini Projects</h1>
+        <GreyBoxTools maxItems={3} />
+      </div>
+      <div>
+        <Link to="/miniprojects" className="icon-link">
+          <p>See All Mini Projects</p>
+          <i className="fa-solid fa-arrow-right" style={{ fontSize: "15pt" }}></i>
+        </Link>
+      </div>
+
+      <div>
+        <h1 className="home-section-title">My GitHub Repositories</h1>
+        <GreyBoxRepos mobileMaxItems={4} />
+      </div>
+      <div>
+        <Link to="/repositories" className="icon-link">
+          <p>See All Repositories</p>
+          <i className="fa-solid fa-arrow-right" style={{ fontSize: "15pt" }}></i>
+        </Link>
+      </div>
+
+      <div className="true-center">
+        <Footer />
+      </div>
+    </>
   );
 }
 

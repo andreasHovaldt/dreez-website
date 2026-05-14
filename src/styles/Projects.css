@@ -20,3 +20,36 @@
 .blue-color {
   color: #15bbe5;
 }
+
+.projects-heading-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-subheading-wrap {
+  display: flex;
+  margin-top: 0;
+}
+
+@media (max-width: 767px) {
+  .projects-heading-wrap h1 {
+    text-align: center;
+    margin-bottom: 4px;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .projects-subheading-wrap h3 {
+    margin: 4px 0 18px;
+    font-size: 14px;
+    color: #9ca3af;
+    font-style: italic;
+  }
+
+  .blue-color h1 {
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+  }
+}

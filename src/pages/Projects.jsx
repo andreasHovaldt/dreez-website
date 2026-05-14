@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Footer from "../components/Footer";
 import GreyBoxProjects from "../components/GreyBoxProjects";
 
-import "../styles/About.css"
+import "../styles/About.css";
+import "../styles/Projects.css";
 
 
 
@@ -29,14 +30,14 @@ function Projects() {
 
 
             {/* Master's in Computer Engineering */}
-            <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-              <h1 style={{ marginLeft: "-23pt" }}>Master's in Computer Engineering</h1>
-              <div style={{display: "flex", marginLeft : "-396pt", marginTop: "-40pt"}}>
+            <div className="projects-heading-wrap">
+              <h1>Master's in Computer Engineering</h1>
+              <div className="projects-subheading-wrap">
                 <h3>Specialization: AI, Vision and Sound</h3>
               </div>
             </div>
 
-            <div style={{marginTop: "-20pt"}}>
+            <div>
               <GreyBoxProjects title="4th Semester: A General Architecture for 3D Perception in Agriculture" 
                               description="Exploring A Unified Approach to Multi-task 3D Perception"
                               abstract="TBD (February 2026 → June 2026)">
@@ -61,11 +62,11 @@ function Projects() {
 
 
             {/* Bachelor's in Robotics */}
-            <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-            <h1 style={{ marginLeft: "-241pt" }}>Bachelor's in Robotics</h1>
+            <div className="projects-heading-wrap">
+            <h1>Bachelor's in Robotics</h1>
             </div>
 
-            <div style={{marginTop: "-30pt"}}>
+            <div>
               <GreyBoxProjects title="6th Semester: Examination of Visual Servoing Techniques For Vertical Farming" 
                                 description="Investigation of both more traditional analytical approaches and modern deep-learning based visual servoing techniques for vertical farming enviroments in collaboration with Seasony."
                                 abstract="Vertical farming is an emerging method in the farming industry. Vertical farming allows for controlling environment variables for the crops to a much higher degree, and enables for an easy robotics integration, such that labor intensive tasks can be automated. The following project is based on a company collaboration with Seasony. The project goal was to create a visual servoing algorithm, such that the robot Watney C could be properly aligned with a rack, in a vertical farming setup. Four different visual servoing algorithms were made, three based on traditional visual servoing techniques, and one based on the implementation of a convolutional neural network. This approach, based on a convolutional neural network, provided the best results, by satisfying the most requirements, and achieving an accuracy of 99.80% for the most demanding task, which was to properly align the robot on the global Z-axis, where a precision of ±8.5 mm was required.">

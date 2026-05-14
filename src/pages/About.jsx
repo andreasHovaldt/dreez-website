@@ -22,11 +22,11 @@ function About() {
             </div>
 
             <div className="true-center">
-                <img src={mountain_pic} className="responsive-image" alt="Mountain" style={{maxWidth:"715pt", border:"3px solid #35465E", borderRadius:"10pt"}}/>
+                <img src={mountain_pic} className="responsive-image" alt="Mountain" style={{ border:"3px solid #35465E", borderRadius:"10pt" }}/>
             </div>
             
             <GreyBox style = {{marginTop:"40pt", paddingTop:"0pt"}}>
-                <div className="true-center" style={{flexDirection:"column"}}>
+                <div className="true-center about-copy" style={{flexDirection:"column"}}>
                     
                     <p style={{fontSize:"16pt"}}>
                         Hello! My name is Andreas, and I am currently pursuing a Master's degree in Computer Engineering, with a focus on AI, Vision, and Sound. 

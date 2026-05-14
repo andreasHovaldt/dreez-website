@@ -31,6 +31,13 @@ h1 {
   line-height: 1.1;
 }
 
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
