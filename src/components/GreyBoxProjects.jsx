@@ -7,30 +7,19 @@ function GreyBoxProjects({ title, description, abstract, link }) {
     const contentRef = useRef(null);
 
     return (
-        <GreyBox 
-            className="project-box" 
-            style={{ maxWidth: "800px", cursor: "pointer" }} 
+        <GreyBox
+            className="project-box"
             onClick={() => setIsOpen(!isOpen)}>
 
             <div className="project-info">
                 <span>
-                    <div style={{ flex: "1 1 auto", minWidth: 0 }}>
+                    <div className="project-title-block">
                         <h2>{title}</h2>
                         <h4>{description}</h4>
                     </div>
-                    <div
-                        style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            flex: "0 0 32px",
-                            width: "32px",
-                            marginTop: "4px",
-                        }}
-                    >
+                    <div className="project-toggle">
                         <i
-                            className={isOpen ? "fa-solid fa-angles-down fa-fw" : "fa-solid fa-angles-right fa-fw"}
-                            style={{ fontSize: "30pt" }}
+                            className={`project-toggle-icon fa-solid fa-fw ${isOpen ? "fa-angles-down" : "fa-angles-right"}`}
                         ></i>
                         {link && (
                             <a
@@ -41,27 +30,19 @@ function GreyBoxProjects({ title, description, abstract, link }) {
                                 aria-label="Open Publication"
                                 title="Open Publication"
                                 className="paper-link"
-                                style={{
-                                    marginTop: "26px",
-                                    color: "inherit",
-                                    textDecoration: "none",
-                                }}
                             >
-                                <i className="fa-regular fa-newspaper" style={{ fontSize: "28pt" }}></i>
+                                <i className="fa-regular fa-newspaper project-paper-icon"></i>
                             </a>
                         )}
                     </div>
                 </span>
-                <div className="hidden" 
+                <div className={`hidden${isOpen ? " open" : ""}`}
                     ref={contentRef}
                     style={{
                         maxHeight: isOpen ? `${contentRef.current?.scrollHeight}px` : "0px",
-                        transition: "max-height 0.5s ease-in-out",
-                        marginLeft: "10px",
-                        marginTop: "10px",
                     }}>
                     <h2>Abstract:</h2>
-                    <p style={{ marginTop: "0" }}>{abstract}</p>
+                    <p className="project-abstract">{abstract}</p>
                 </div>
             </div>
         </GreyBox>

@@ -72,7 +72,7 @@ function GreyBoxRepos({ slice = true, mobileMaxItems = null }) {
                     <h2>{repo.name}</h2>
                     <p>{repo.description || "No description available ;("}</p>
                     <div className="repo-info">
-                        <span style={{backgroundColor: "#374151"}}>{repo.language || "None"}</span>
+                        <span className="repo-language">{repo.language || "None"}</span>
                         <span>
                             <i className="fa-solid fa-star"></i>
                             {repo.stargazers_count}

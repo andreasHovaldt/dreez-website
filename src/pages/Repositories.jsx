@@ -17,12 +17,12 @@ function Repositories() {
         <>
             {/* All my GitHub repositories */}
             <div>
-              <h1 className="true-center repositories-title" style={{marginTop: "40pt", marginBottom: "20pt"}}>All My GitHub Repositories</h1>
+              <h1 className="true-center repositories-title">All My GitHub Repositories</h1>
               <GreyBoxRepos slice={false}/>
             </div>
             <div>
               <Link to="/" className="icon-link">
-                <i className="fa-solid fa-arrow-left" style={{ fontSize: "15pt" }}></i>
+                <i className="fa-solid fa-arrow-left icon-md"></i>
                 <p>Go Back To Home</p>
               </Link>
             </div>

@@ -9,12 +9,12 @@
   width: 260px;
   min-height: 180px;
   padding: 20px;
-  background-color: #1f2937;
+  background-color: var(--surface);
   border-radius: 20px;
   color: white;
   text-align: left;
   transition: transform 0.3s, filter 0.3s;
-  border: 2px solid #35465e;
+  border: 2px solid var(--border);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -24,7 +24,7 @@
   width: 60px;
   height: 60px;
   border-radius: 12px;
-  background-color: #374151;
+  background-color: var(--surface-alt);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,7 +41,7 @@
 
 .tool-thumbnail i {
   font-size: 28px;
-  color: #15bbe5;
+  color: var(--accent);
 }
 
 .tool-content {
@@ -57,7 +57,7 @@
 .tool-content p {
   font-size: 14px;
   font-style: italic;
-  color: #9ca3af;
+  color: var(--text-muted);
   margin: 0;
   line-height: 1.4;
 }
@@ -77,12 +77,12 @@
 
 @media (hover: hover) and (pointer: fine) {
   .tool-link a:hover {
-    color: #15bbe5;
+    color: var(--accent);
   }
 
   .tool-box:hover {
-    filter: drop-shadow(0 0 15px #35465e);
-    border: 2px solid #15bbe5;
+    filter: drop-shadow(0 0 15px var(--border));
+    border: 2px solid var(--accent);
     transform: scale(1.05);
   }
 }

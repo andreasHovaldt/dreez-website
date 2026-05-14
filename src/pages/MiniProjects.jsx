@@ -16,15 +16,15 @@ function MiniProjects() {
         <>
             {/* All Mini Projects */}
             <div>
-                <h1 className="true-center mini-projects-title" style={{marginTop: "40pt", marginBottom: "20pt"}}>My Mini Projects</h1>
-                <p className="true-center" style={{marginBottom: "30pt", color: "#9CA3AF", fontStyle: "italic"}}>
+                <h1 className="true-center mini-projects-title">My Mini Projects</h1>
+                <p className="true-center mini-projects-subtitle">
                     A collection of small tools, calculators, and games.
                 </p>
                 <GreyBoxTools slice={false}/>
             </div>
             <div>
                 <Link to="/" className="icon-link">
-                    <i className="fa-solid fa-arrow-left" style={{ fontSize: "15pt" }}></i>
+                    <i className="fa-solid fa-arrow-left icon-md"></i>
                     <p>Go Back To Home</p>
                 </Link>
             </div>

@@ -1,7 +1,7 @@
 .project-info span {
   display: flex;
   gap: 25px;
-  align-items: flex-start;
+  align-items: center;
   background-color: transparent;
   padding: 5px 10px;
   border-radius: 5px;
@@ -16,11 +16,38 @@
 }
 
 .project-box {
-  background-color: #1f2937;
-  color: white;
+  background-color: var(--surface);
+  color: var(--text);
   text-align: left;
   transition: transform 0.3s, filter 0.3s;
-  border: 2px solid #35465e;
+  border: 2px solid var(--border);
+  max-width: 800px;
+  cursor: pointer;
+}
+
+.project-title-block {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.project-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 32px;
+  width: 32px;
+}
+
+.project-toggle-icon {
+  font-size: 30pt;
+}
+
+.project-paper-icon {
+  font-size: 28pt;
+}
+
+.project-abstract {
+  margin-top: 0;
 }
 
 .paper-link {
@@ -30,39 +57,49 @@
   border: 2px solid transparent;
   border-radius: 6px;
   transition: transform 0.3s;
+  margin-top: 26px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-info div.hidden.open {
+  margin-left: 10px;
+  margin-top: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .project-box:hover,
   .project-box:focus-visible {
-    filter: drop-shadow(0 0 15px #35465e);
-    border: 2px solid #5395f2;
+    filter: drop-shadow(0 0 15px var(--border));
+    border: 2px solid var(--accent-hover);
     transform: scale(1.02);
   }
 
   .paper-link:hover,
   .paper-link:focus-visible {
-    text-shadow: 0 0 15px #ffffff;
+    text-shadow: 0 0 15px var(--text);
     transform: scale(1.25);
   }
 }
 
 @media (max-width: 767px) {
-  .project-box {
+  .GreyBox.project-box {
     max-width: 100%;
-    padding: 16px !important;
+    padding: 16px;
     border-radius: 16px;
   }
 
   .project-info span {
     gap: 12px;
-    align-items: flex-start;
+    align-items: center;
     padding: 0;
   }
 
-  .project-info div.hidden {
-    margin-left: 0 !important;
-    margin-top: 14px !important;
+  .project-info div.hidden.open {
+    margin-left: 0;
+    margin-top: 14px;
     padding-top: 14px;
     border-top: 1px solid rgba(255, 255, 255, 0.06);
   }
