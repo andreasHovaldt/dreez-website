@@ -33,10 +33,9 @@ function Home() {
           <div className="home-hero-copy">
             <h1 className="blue-color">Welcome to my website!</h1>
             <p className="blue-color home-hero-intro">
-              My name is Andreas Hovaldt Højrup and I'm a student at Aalborg University.
-              I completed my Bachelor's in Robotics in the summer of 2024. Currently I'm
-              pursuing a Master's in Computer Engineering, specifically specializing in AI,
-              Vision and Sound.
+              My name is Andreas Hovaldt Højrup and I recently graduated from Aalborg University.
+              I completed my Bachelor's in Robotics in the summer of 2024, 
+              and finished my Master's in Computer Engineering, specifically specializing in AI, Vision and Sound, in the summer of 2026.
             </p>
           </div>
 
