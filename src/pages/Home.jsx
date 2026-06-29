@@ -6,7 +6,7 @@ import GreyBox from "../components/GreyBox";
 import GreyBoxTools from "../components/GreyBoxTools";
 import GreyBoxRepos from "../components/GreyBoxRepos";
 
-import headshot from "../assets/CV_picture_scaled.png";
+import headshot from "../assets/modified_cv_image_circle.png";
 import cvIcon from "../assets/cv_icon.png";
 
 import "../styles/Home.css";
@@ -33,10 +33,9 @@ function Home() {
           <div className="home-hero-copy">
             <h1 className="blue-color">Welcome to my website!</h1>
             <p className="blue-color home-hero-intro">
-              My name is Andreas Hovaldt Højrup and I'm a student at Aalborg University.
-              I completed my Bachelor's in Robotics in the summer of 2024. Currently I'm
-              pursuing a Master's in Computer Engineering, specifically specializing in AI,
-              Vision and Sound.
+              My name is Andreas Hovaldt Højrup and I recently graduated from Aalborg University.
+              I completed my Bachelor's in Robotics in the summer of 2024, 
+              and finished my Master's in Computer Engineering, specifically specializing in AI, Vision and Sound, in the summer of 2026.
             </p>
           </div>
 
