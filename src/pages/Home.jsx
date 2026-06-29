@@ -6,7 +6,7 @@ import GreyBox from "../components/GreyBox";
 import GreyBoxTools from "../components/GreyBoxTools";
 import GreyBoxRepos from "../components/GreyBoxRepos";
 
-import headshot from "../assets/CV_picture_scaled.png";
+import headshot from "../assets/modified_cv_image_circle.png";
 import cvIcon from "../assets/cv_icon.png";
 
 import "../styles/Home.css";
